@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border" >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="TogleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Bienvenido</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="assets/slides/avar.jpg" alt="">
+      </ion-avatar>
+          </ion-buttons>  
+       </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab slot="fixed" vertical="bottom" horizontal ="end"> 
+    <ion-fab-button color="morado" >
+  <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="logo-facebook" color="facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter" color="secondary"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-instagram" color="morado"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-slides pager="false">
+  
+    <ion-slide *ngFor="let slide of slidesP">   
+      <div    class="slide-img-padding">
+        <img [src]="slide.img">
+      </div>
+     <div>
+       <h3   [routerLink]="slide.redirecTo" [innerHTML] ="slide.titulo"></h3>
+     </div>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/icon/Slide3.svg"/>
+      <h4 >Realizar Tramites</h4>
+      <ion-button  routerLink="/tramites" fill="clear">Continuar<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+  
+  </ion-slides>
+      
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-grid fixed>
+<ion-row>
+  <ion-col size="10" offset="1">
+<ion-button  style="height: 100%;"  color="morado" expand="full"  shape="round" mode="ios"
+ class="btn-primary">
+MI HORARIO DE CLASES
+</ion-button>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="10" offset="1">
+<ion-button 
+expand="full" 
+fill="clear"
+class="btn-clear">
+Mi perfil
+</ion-button>
+  </ion-col>
+</ion-row>
+  </ion-grid>
+</ion-footer>

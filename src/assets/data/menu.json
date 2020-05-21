@@ -1,0 +1,35 @@
+[
+    {
+        "icon":"home-outline",
+        "name":"Inicio",
+        "redirecTo":"/home"
+    },
+
+    {
+        "icon":"school-outline",
+        "name":"Mi perfil",
+        "redirecTo":"/perfil"
+    },
+    
+    {
+        "icon":"library-outline",
+        "name":"Info Académica",
+        "redirecTo":"/informacion"
+        
+    },
+    {
+        "icon":"calendar",
+        "name":"Horario",
+        "redirecTo":"/horario"
+    },
+    {
+        "icon":"card-outline",
+        "name":"Finanzas",
+        "redirecTo":"/finanzas"
+    },
+    {
+        "icon":"folder-open-outline",
+        "name":"Tramites",
+        "redirecTo":"/tramites"
+    }
+]

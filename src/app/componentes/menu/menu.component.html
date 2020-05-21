@@ -1,0 +1,22 @@
+<ion-menu side="start" menuId="MiMenu" contentId="principal">
+  <ion-header>
+    <ion-toolbar >
+      <ion-title  style="margin-left:-10px;"> Evol </ion-title>
+      <ion-note>Direne@myevol.biz</ion-note>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list id="inbox-list">
+      
+      <ion-menu-toggle *ngFor="let c of componentes | async" >
+        <ion-item [routerLink]="c.redirecTo">
+          <ion-icon style="color: #8C87FF;" slot="start" [name]="c.icon">
+          </ion-icon>
+          <ion-label style="color: grey;">{{c.name}}</ion-label>
+          </ion-item>
+      </ion-menu-toggle>
+     
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
