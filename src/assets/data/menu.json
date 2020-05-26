@@ -1,23 +1,5 @@
 [
     {
-        "icon":"home-outline",
-        "name":"Inicio",
-        "redirecTo":"/home"
-    },
-
-    {
-        "icon":"school-outline",
-        "name":"Mi perfil",
-        "redirecTo":"/perfil"
-    },
-    
-    {
-        "icon":"library-outline",
-        "name":"Info Académica",
-        "redirecTo":"/informacion"
-        
-    },
-    {
         "icon":"calendar",
         "name":"Horario",
         "redirecTo":"/horario"

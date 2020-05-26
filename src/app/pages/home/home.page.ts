@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuController} from '@ionic/angular';
-import {Componente} from '../interfaces/interfaces';
+import {Componente, ComponenteAlumno} from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -27,6 +27,7 @@ export class HomePage implements OnInit {
   ]
   
   componentes :Componente[] = [];
+  componentesAlumno :ComponenteAlumno[] = [];
 
   constructor(private menuCtrl:MenuController) { }
   TogleMenu(){

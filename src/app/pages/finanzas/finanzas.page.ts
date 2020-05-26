@@ -9,11 +9,11 @@ import { MenuController } from '@ionic/angular';
 })
 export class FinanzasPage implements OnInit {
 
-  componentes :Componente[] = [];
+  
 
-  constructor(private menuCtrl:MenuController) { }
+  constructor() { }
   TogleMenu(){
-    this.menuCtrl.toggle();/*hace mostrar y ocultar el boton*/
+  
       }
 
   ngOnInit() {

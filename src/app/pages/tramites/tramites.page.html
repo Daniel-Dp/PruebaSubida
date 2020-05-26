@@ -1,3 +1,4 @@
+
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -5,7 +6,7 @@
         <ion-icon slot="icon-only" name="menu"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Bienvenido</ion-title>
+    <ion-title>Generar tramite</ion-title>
     <ion-buttons slot="end">
       <ion-avatar>
         <img src="assets/slides/avar.jpg" alt="">
@@ -13,7 +14,61 @@
           </ion-buttons>  
        </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <div class="ion-padding">
+    <form [formGroup]="tramiteForm" (ngSubmit)="submit()">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Código:</ion-label>
+          <ion-input disabled value="i201713831" ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Alumno:</ion-label>
+          <ion-input disabled value="Daniel Irene"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Teléfono(s)</ion-label>
+          <ion-input disabled value="983409039"></ion-input>
+        </ion-item>
+        
 
+        <ion-list-header>
+          <ion-label>Tramite de Alumnos</ion-label>
+        </ion-list-header>
+        
+        <ion-item>
+          <ion-label>Tipo de tramite</ion-label>
+          <ion-select   interface="action-sheet">
+            <ion-select-option value="cambioCarrera">Cambio de carrera </ion-select-option>
+            <ion-select-option value="cartaPoder">Carta poder</ion-select-option>
+            <ion-select-option value="intercambio">Intercambio estudiantil</ion-select-option>
+            <ion-select-option value="reincorporación">Reincorporación</ion-select-option>
+            <ion-select-option value="retiroCurso">Retiro de cursos</ion-select-option>
+            <ion-select-option value="convalidacion">Convalidación de Cursos</ion-select-option>
+            <ion-select-option value="rectificaciónNotas">Rectificación de notas</ion-select-option>
+            <ion-select-option value="constanciaTitulos">Constancia y legalizacion de titulos</ion-select-option>
+            <ion-select-option value="constaciaBachiller">Constancia de bachiller</ion-select-option>
+            <ion-select-option value="constanciaGraduacion">Constancia de graducacion y titulación</ion-select-option>
+            <ion-select-option value="duplicadoCarnet">Duplicado de Carnet</ion-select-option>
+
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Ingresar sustento de su solicitud</ion-label>
+          <ion-textarea formControlName="state"></ion-textarea>
+        </ion-item>
+        <div *ngFor="let error of errorMessages.state">
+          <ng-container *ngIf="state.hasError(error.type) && (state.dirty || state.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+      </ion-list>
+      <ion-button [disabled]="!tramiteForm.valid" type="submit" expand="block">Enviar <ion-icon slot="end"
+          name="create">
+        </ion-icon>
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

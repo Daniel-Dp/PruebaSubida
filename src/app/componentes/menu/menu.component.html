@@ -7,7 +7,14 @@
   </ion-header>
   <ion-content>
     <ion-list id="inbox-list">
-      
+      <ion-menu-toggle *ngFor="let d of componentesAlumno | async" >
+        <ion-item [routerLink]="d.redirecTo">
+          <ion-icon style="color: #8C87FF;" slot="start" [name]="d.icon">
+          </ion-icon>
+          <ion-label style="color: grey;">{{d.name}}</ion-label>
+          </ion-item>
+      </ion-menu-toggle>
+     
       <ion-menu-toggle *ngFor="let c of componentes | async" >
         <ion-item [routerLink]="c.redirecTo">
           <ion-icon style="color: #8C87FF;" slot="start" [name]="c.icon">
